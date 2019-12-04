@@ -1,0 +1,172 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[letterpaper]{article}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{wrapfig}
+\usepackage{wasysym}
+\usepackage{stackrel} 
+\usepackage[noend]{algorithmic}
+\usepackage{moreverb}
+\usepackage[usenames]{color}
+\usepackage{colortbl}
+\usepackage{tikz}
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+\usepackage[T1]{fontenc}
+%\usepackage[sc,osf]{mathpazo}
+
+% Set your name here
+\def\name{Евгений Лупашин}
+%\def\name{Evgeniy Lupashin}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{}
+
+\let\oldhref\href
+\renewcommand{\href}[2]{\oldhref{#1}{\bfseries#2}}
+
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {economics, statistics, mathematics},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 10.5in},
+  left=1.0in,
+  right=1.1in,
+  top=0.75in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{xcolor}
+\usepackage{xcolor-patch}
+\usepackage{sectsty}
+
+\definecolor{myblue}{rgb}{0.231372549, 0.45882353, 0.705882353}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+%\chapterfont{\color{myblue}}
+\sectionfont{\color{myblue}\large\itshape\underline}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+%\renewenvironment{itemize}{
+%  \begin{list}{}{
+%    \setlength{\leftmargin}{1.5em}
+%  }
+%}{
+%  \end{list}
+%}
+\renewcommand\labelitemi{\raisebox{\mylen}{\tiny$\bullet$}}
+
+\begin{document}
+
+% Place name at left
+{\huge \textbf{\name}}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\vspace{0.1in}
+
+\begin{minipage}{0.45\linewidth}
+  \href{https://www.hse.ru/}{НИУ ВШЭ} \\
+  Прикладная математика и информатика \\
+  Кочновский пр. 3 \\
+  Москва 125319
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+  \begin{tabular}{ll}
+    Телефон: & +7 (916) 846-4329 \\
+    Email: & \href{mailto:lupasin1999@gmail.com}{\tt lupasin1999@gmail.com} \\
+  \end{tabular}
+\end{minipage}
+
+
+\section*{Образование}
+\begin{itemize}
+	\item НИУ ВШЭ, Факультет компьютерных наук, группа с углублённым изучением математики и программирования, 2017-2021
+	\item Зимняя Компьютерная Школа, 2017
+	\item Летняя Компьютерная Школа, В' и В+, 2015-2016
+\end{itemize}
+
+
+\section*{Опыт}
+\begin{itemize}
+	\item \href{https://city4people.ru/post/kalkulyator-elektrobusov.html}{Проект} для <<Городских проектов Каца и Варламова>>
+	\item Участие в хакатоне UrbanHack с проектом по анализу расходов на различные виды общественного транспорта
+	\item Летняя практика в НИУ ВШЭ по C++ и Qt на тему сбора данных и анализа профессиональных качеств наборщиков текста
+	\item Ссылка на GitHub: \href{https://github.com/PipeKnight}{Тык}
+\end{itemize}
+
+
+\section*{Навыки}
+\subsection*{Уверенное владение:}
+\begin{itemize}
+	\item C++, Python 3
+\end{itemize}
+\subsection*{Базовое владение:}
+\begin{itemize}
+	\item Qt, Java, Assembler
+\end{itemize}
+
+\section*{Прочее}
+\subsection*{Успехи в олимпиадах:}
+\begin{itemize}
+	\item Победитель <<Высшей пробы>> по информатике в 2016 и 2017 годах
+	\item Призёр регионального этапа ВОШ по информатике в 2015-2017 годах
+	\item Призёр заключительного этапа ИОИП по информатике в 2017 году
+\end{itemize}
+\subsection*{Пройденные курсы:}
+\begin{itemize}
+	\item Основы и методология программирования
+	\item Алгоритмы и структуры данных
+	\item Математический анализ
+	\item Дискретная математика
+	\item Линайная алгебра и геометрия
+	\item Алгебра
+	\item Теория вероятности
+\end{itemize}
+
+
+\end{document}
